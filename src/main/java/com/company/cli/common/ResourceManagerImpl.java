@@ -8,7 +8,7 @@ import com.company.cli.Charactor.EnemyConfiguration;
 import com.company.cli.Charactor.PlayerConfiguration;
 
 public class ResourceManagerImpl implements ResourceManager {
-	public static Map<Object, Object> savedGame = new HashMap<>();
+	public static Map<Object, Object> savedGame = null;
 
 	@Override
 	public GameState loadGame() {
@@ -24,6 +24,7 @@ public class ResourceManagerImpl implements ResourceManager {
 
 	@Override
 	public void saveGame(GameState gameState) {
+		savedGame = new HashMap<>();
 		savedGame.put("PLAYER", gameState.getPlayerConfiguration());
 		savedGame.put("ENEMEY", gameState.getEnemyConfiguration());
 

@@ -104,7 +104,7 @@ public class GameManager {
 		System.out.println("\t 3.Save the Game");
 	}
 
-	private static EnemyConfiguration getEnemyForFight(RealmConfiguration realmConfiguration) {
+	public static EnemyConfiguration getEnemyForFight(RealmConfiguration realmConfiguration) {
 		Random random = new Random();
 		EnemyConfiguration randomEnemy = realmConfiguration.getEnemyConfiguration()
 				.get(random.nextInt(realmConfiguration.getEnemyConfiguration().size()));
