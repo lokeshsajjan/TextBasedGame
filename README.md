@@ -10,7 +10,7 @@ The goal was to write a command line based role playing game.
 
 ## Running
 ### IDE
-just run `main` method in `com.company.cli.Main` class
+just run `main` method in `Main` class
 
 JAR
 ------------------
