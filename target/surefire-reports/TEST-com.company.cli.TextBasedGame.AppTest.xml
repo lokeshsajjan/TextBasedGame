@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.company.cli.TextBasedGame.AppTest" time="0.005" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\work\Sofwares\JDK\jdk1.8.0.161\jre\bin"/>
+    <property name="java.vm.version" value="25.161-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\work\Sofwares\Tools\eclipse\workspace\TextBasedGame"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\work\Sofwares\Tools\eclipse\workspace\TextBasedGame"/>
+    <property name="java.runtime.version" value="1.8.0_161-1-ojdkbuild-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\lsajjan\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\work\Sofwares\build\apache-maven-3.5.4\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\work\Sofwares\JDK\jdk1.8.0.161\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\PuTTY\;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\work\Sofwares\build\apache-maven-3.5.4\bin;C:\work\Sofwares\JDK\jdk1.8.0.161\bin;C:\work\Sofwares\Servers\apache-tomcat-9.0.6\bin;C:\Program Files\MySQL\MySQL Server 5.6\bin;C:\Program Files\nodejs\;C:\Program Files\jEdit;C:\Program Files\Microsoft VS Code\bin;C:\work\Sofwares\Servers\SVN\bin;C:\work\Sofwares\Servers\SVN\bin;C:\work\Sofwares\git\Git\cmd;C:\Program Files\Cloud Foundry;C:\work\Sofwares\build\apache-ant-1.10.5\bin;C:\Users\lsajjan\AppData\Local\Microsoft\WindowsApps;C:\Users\lsajjan\AppData\Roaming\npm;C:\Users\lsajjan\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="maven.conf" value="C:\work\Sofwares\build\apache-maven-3.5.4\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\work\Sofwares\build\apache-maven-3.5.4\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\lsajjan"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="lsajjan"/>
+    <property name="java.class.path" value="C:\work\Sofwares\build\apache-maven-3.5.4\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\work\Sofwares\JDK\jdk1.8.0.161\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_161-1-ojdkbuild"/>
+    <property name="java.ext.dirs" value="C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\resources.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\rt.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\sunrsasign.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\jsse.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\jce.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\charsets.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\lib\jfr.jar;C:\work\Sofwares\JDK\jdk1.8.0.161\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\work\Sofwares\build\apache-maven-3.5.4\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase classname="com.company.cli.TextBasedGame.AppTest" name="testApp" time="0.005"/>
+</testsuite>
