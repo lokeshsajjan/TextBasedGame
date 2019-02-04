@@ -7,9 +7,16 @@ import com.company.cli.GameState;
 import com.company.cli.Charactor.EnemyConfiguration;
 import com.company.cli.Charactor.PlayerConfiguration;
 
+/**
+ * @author lsajjan
+ *
+ */
 public class ResourceManagerImpl implements ResourceManager {
 	public static Map<Object, Object> savedGame = null;
 
+	/* load the saved game
+	 * @see com.company.cli.common.ResourceManager#loadGame()
+	 */
 	@Override
 	public GameState loadGame() {
 		if (savedGame != null) {
@@ -22,6 +29,9 @@ public class ResourceManagerImpl implements ResourceManager {
 		}
 	}
 
+	/* Save the player game
+	 * @see com.company.cli.common.ResourceManager#saveGame(com.company.cli.GameState)
+	 */
 	@Override
 	public void saveGame(GameState gameState) {
 		savedGame = new HashMap<>();

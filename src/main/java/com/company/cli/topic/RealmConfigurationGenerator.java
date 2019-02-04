@@ -9,6 +9,11 @@ import java.util.function.Supplier;
 import com.company.cli.Charactor.EnemyConfiguration;
 import com.company.cli.Charactor.RealmConfiguration;
 
+/**
+ * @author lsajjan
+ * Contains the topc information 
+ * you can add new topic in this class
+ */
 public class RealmConfigurationGenerator {
 
 	public static ArrayList<RealmConfiguration> realms() {
@@ -18,6 +23,10 @@ public class RealmConfigurationGenerator {
 		return realmConfigurations;
 	}
 
+	/**information about Lord of the rings. 
+	 * name, desc, health, damage
+	 * @return
+	 */
 	private static RealmConfiguration lotrRealm() {
 		return buildRealmConfiguration("Lord of the rings", 15, RealmConfigurationGenerator::someUrukHai,
 				buildEnemy("Sauron", 300, 13, 5), buildEnemy("Balrog", 200, 12, 3), buildEnemy("Saruman", 200, 13, 0),
@@ -25,6 +34,10 @@ public class RealmConfigurationGenerator {
 				buildEnemy("Witch-king of Angmar", 60, 7, 2), buildEnemy("Smaug", 250, 15, 2));
 	}
 
+	/**information about Lord of the rings. 
+	 * name, desc, health, damage
+	 * @return
+	 */
 	private static RealmConfiguration gta2Realm() {
 		return buildRealmConfiguration("Grand Theft Auto", 14, RealmConfigurationGenerator::someGangster,
 				buildEnemy("Johnny Zoo", 300, 15), buildEnemy("Trey Welsh", 200, 14), buildEnemy("Elmo", 250, 13),
@@ -72,6 +85,11 @@ public class RealmConfigurationGenerator {
 		return new RealmConfiguration(name, enemies.size() - 10, enemies);
 	}
 
+	/**pick the ramdom enemy form the RealmConfiguration
+	 * @param numberOFRandomEnemies
+	 * @param enemySupplier
+	 * @return
+	 */
 	private static List<EnemyConfiguration> randomEnemies(int numberOFRandomEnemies,
 			Supplier<EnemyConfiguration> enemySupplier) {
 		List<EnemyConfiguration> randomEnemies = new ArrayList<EnemyConfiguration>();

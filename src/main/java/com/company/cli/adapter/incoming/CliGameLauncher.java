@@ -7,8 +7,16 @@ import com.company.cli.MainMenuManager;
 import com.company.cli.adapter.exception.ConfigurationException;
 import com.company.cli.adapter.exception.UserInputParseException;
 
+/**
+ * @author lsajjan
+ *GameLauncher class to Launch the game
+ */
 public class CliGameLauncher {
 	private static final Logger LOG = LogManager.getLogger(CliGameLauncher.class);
+		/**
+		 * This method is used to start he game 
+		 * it will accept the input from the player
+		 */
 		public static void startGame() {
 
 		try {
@@ -35,6 +43,10 @@ public class CliGameLauncher {
 
 	}
 
+	/**Terminates the game
+	 * @param msg
+	 * @param e
+	 */
 	private static void shutdown(String msg, Throwable e) {
 		System.out.println(msg);
 		LOG.fatal(msg, e);

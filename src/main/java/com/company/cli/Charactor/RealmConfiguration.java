@@ -3,6 +3,9 @@ package com.company.cli.Charactor;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @author lsajjan Enemy details
+ */
 public class RealmConfiguration implements Serializable {
 	private final String name;
 	private final int realmSize;
@@ -14,6 +17,9 @@ public class RealmConfiguration implements Serializable {
 		this.enemies = enemies;
 	}
 
+	/**
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}

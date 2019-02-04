@@ -6,9 +6,16 @@ import com.company.cli.menu.MainMenu;
 import com.company.cli.menu.MainMenuItem;
 import com.company.cli.topic.RealmConfigurationGenerator;
 
+/**
+ * @author lsajjan
+ *Main manager to manage the Menus
+ */
 public class MainMenuManager {
 	private MainMenu mainMenu = new CliMainMenuImpl();
 
+	/**Displays the Main menu to choose option for next step
+	 * @throws ConfigurationException
+	 */
 	public void showMenu() throws ConfigurationException {
 		MainMenuItem choice;
 		do {
@@ -34,6 +41,10 @@ public class MainMenuManager {
 		} while (MainMenuItem.EXIT != choice);
 	}
 
+	/**
+	 * Thank you message to say Thanks to players
+	 * this will execute once game is end or player quit the game
+	 */
 	private void thankYouMessage() {
 		System.out.println("####################################");
 		System.out.println("###  THANK YOU FOR PLAYING  ########");

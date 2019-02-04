@@ -23,14 +23,25 @@ import com.company.cli.common.ResourceManager;
 import com.company.cli.common.ResourceManagerImpl;
 
 //TODO: many plasces replace String constants
+/**
+ * @author lsajjan
+ *It Manages the Game to start or to choose topics
+ */
 public class GameManager {
 	
 	private static final String INVALID_INPUT_MESSAGE = "Oops Invalid Action Please try one more time";
 	private static final String PLAYER_LOST_MESSAGE = "You have taken to much damage you are too weak to go on!";
+	/**
+	 * 
+	 */
 	public static ResourceManager rsManger = new ResourceManagerImpl();
 	private final static Scanner scanner = new Scanner(System.in);
 	private static final Logger LOG = LogManager.getLogger(GameManager.class);
 
+	/**
+	 * @param realms
+	 * Starts the new game accept Emeny configuration
+	 */
 	public static void newGame(ArrayList<RealmConfiguration> realms) {
 		LOG.traceEntry();
 		System.out.println(REALM_QUESTION);
@@ -42,6 +53,10 @@ public class GameManager {
 
 	}
 
+	/**
+	 * @param playerConfiguration
+	 * @param realmConfiguration
+	 */
 	private static void biginGame(PlayerConfiguration playerConfiguration, RealmConfiguration realmConfiguration) {
 		System.out.println(PLAYER_READY_MESSAGE);
 		System.out.println("======================");
@@ -50,6 +65,10 @@ public class GameManager {
 
 	}
 
+	/**Fight player with enemy and displys the health of player and enemy
+	 * @param playerConfiguration
+	 * @param randomEnemy
+	 */
 	private static void fightWithEnemy(PlayerConfiguration playerConfiguration, EnemyConfiguration randomEnemy) {
 		Random RANDOM = new Random();
 		int enemyHealth = randomEnemy.getMaxHp();
@@ -97,6 +116,9 @@ public class GameManager {
 		}
 	}
 
+	/**
+	 * Displays fight menu options to the player
+	 */
 	private static void showFightMenu() {
 		System.out.println("What you would like to do ");
 		System.out.println("\t 1.Attack");
@@ -104,6 +126,10 @@ public class GameManager {
 		System.out.println("\t 3.Save the Game");
 	}
 
+	/**Get the enemy randomly form the Realmconfiguration to fight with player
+	 * @param realmConfiguration
+	 * @return
+	 */
 	public static EnemyConfiguration getEnemyForFight(RealmConfiguration realmConfiguration) {
 		Random random = new Random();
 		EnemyConfiguration randomEnemy = realmConfiguration.getEnemyConfiguration()
@@ -114,12 +140,19 @@ public class GameManager {
 		return randomEnemy;
 	}
 
+	/**Create the basic details about the player
+	 * asking questions to the user
+	 * @return
+	 */
 	private static PlayerConfiguration initPlayer() {
 		System.out.println(INTRODUCTION);
 		PlayerConfiguration playerConfiguration = askQuestion();
 		return playerConfiguration;
 	}
 
+	/**Get the player infirmation 
+	 * @return
+	 */
 	private static PlayerConfiguration askQuestion() {
 
 		System.out.println(NAME_QUESTION);
@@ -139,12 +172,20 @@ public class GameManager {
 
 	}
 
+	/**Starts the game
+	 * @param realms
+	 * @return Player and Enemy options
+	 */
 	public static RealmConfiguration startGame(ArrayList<RealmConfiguration> realms) {
 		printAllOption(realms);
 		return selectOption(realms);
 
 	}
 
+	/**
+	 * @param realms
+	 * @return the user selected meny item
+	 */
 	public static RealmConfiguration selectOption(ArrayList<RealmConfiguration> realms) {
 
 		int result = Integer.parseInt(scanner.nextLine());
@@ -156,6 +197,9 @@ public class GameManager {
 
 	}
 
+	/**Prints the all menuItem to the user
+	 * @param realms
+	 */
 	private static void printAllOption(ArrayList<RealmConfiguration> realms) {
 
 		System.out.println("Please choose one of those options:");
@@ -167,6 +211,11 @@ public class GameManager {
 
 	}
 
+	/**
+	 * This method loads the saved game by the plalyer
+	 * get the player imformation from the MAAP
+	 * TODO: we can save the details in the .ser file ot database
+	 */
 	public static void loadGame() {
 		GameState gameState = rsManger.loadGame();
 		if (null != gameState) {
